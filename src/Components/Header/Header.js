@@ -19,23 +19,26 @@ function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
+            {/* Добавляем классы для изменения цвета текста */}
             <Nav.Link href="#new" className="mx-3 text-dark">New</Nav.Link>
             <Nav.Link href="#men" className="mx-3 text-dark">Men</Nav.Link>
             <Nav.Link href="#women" className="mx-3 text-dark">Women</Nav.Link>
             <Nav.Link href="#kids" className="mx-3 text-dark">Kids</Nav.Link>
           </Nav>
           <Nav className="ms-auto">
-            <div className="d-flex align-items-center">
-              <img
-                src={cart}
-                width="30"
-                height="30"
-                className="d-inline-block align-top"
-                style={{ marginRight: '10px' }}
-                alt="Cart"
-              />
+            <Nav.Link href="#cart">
+              <div className="d-flex align-items-center">
+                <img
+                  src={cart}
+                  width="30"
+                  height="30"
+                  className="d-inline-block align-top"
+                  style={{ marginRight: '10px' }}
+                  alt="Cart"
+                />
               <Nav.Link href="#sign-in" className="mx-3 text-dark">Sign in</Nav.Link>
-            </div>
+              </div>
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
