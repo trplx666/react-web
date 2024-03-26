@@ -36,7 +36,7 @@ function Header() {
                   style={{ marginRight: '10px' }}
                   alt="Cart"
                 />
-                Sign in
+                <Nav.Link href="#sign-in" className="mx-3">Sign in</Nav.Link>
               </div>
             </Nav.Link>
           </Nav>
