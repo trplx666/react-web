@@ -6,7 +6,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 
 function Header() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiary fixed-top"> {/* Добавляем класс fixed-top для фиксированного позиционирования */}
       <Container>
         <Link to="/">
           <img

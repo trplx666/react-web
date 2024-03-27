@@ -1,0 +1,28 @@
+.clothing-container {
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .clothing-image {
+    width: 300px; /* Увеличиваем ширину изображений */
+    height: 400px; /* Увеличиваем высоту изображений */
+    object-fit: cover;
+  }
+
+
+
+  .clothing-image-container {
+    position: relative;
+    margin: 0 10px; /* Внешний отступ между изображениями */
+  }
+  
+  .image-alt {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin: 0;
+    padding: 5px;
+    background-color: rgba(201, 40, 40, 0.8);
+    border-radius: 5px;
+  }
