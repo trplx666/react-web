@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from './slider/Slider';
 import AboutBlock from './categories/aboutblock/AboutBlock';
 import ClothingCategories from './categories/clothingcategories/ClothingCategories';
-import './Home.css';
+
 
 export const Home = () => (
   <div>

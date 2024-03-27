@@ -16,7 +16,7 @@ function App() {
       <div>
         <Header />
         <Routes>
-          <Route exact path="/" element={<Home />} /> {/* Заменим component на element */}
+          <Route exact path="/" element={<Home />} />
           <Route exact path="/men" element= {<Men/>} />
           <Route path="/women" element= {<Women/>} />
           <Route path="/kids" element= {<Kids/>} />
