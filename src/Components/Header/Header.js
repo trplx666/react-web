@@ -8,7 +8,7 @@ function Header() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand as={Link} to="/"> {/* Заменяем Navbar.Brand на Link */}
+        <Link to="/">
           <img
             src={logo}
             width="30"
@@ -16,17 +16,17 @@ function Header() {
             className="d-inline-block align-top"
             alt="Logo"
           />
-        </Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/new" className="mx-3 text-dark">New</Nav.Link> {/* Используем Link */}
-            <Nav.Link as={Link} to="/men" className="mx-3 text-dark">Men</Nav.Link> {/* Используем Link */}
-            <Nav.Link as={Link} to="/women" className="mx-3 text-dark">Women</Nav.Link> {/* Используем Link */}
-            <Nav.Link as={Link} to="/kids" className="mx-3 text-dark">Kids</Nav.Link> {/* Используем Link */}
+            <Link to="/new" className="mx-3 text-dark" style={{ textDecoration: 'none' }}>New</Link>
+            <Link to="/men" className="mx-3 text-dark" style={{ textDecoration: 'none' }}>Men</Link>
+            <Link to="/women" className="mx-3 text-dark" style={{ textDecoration: 'none' }}>Women</Link>
+            <Link to="/kids" className="mx-3 text-dark" style={{ textDecoration: 'none' }}>Kids</Link>
           </Nav>
           <Nav className="ms-auto">
-            <Nav.Link href="#cart">
+            <Link href="#cart">
               <div className="d-flex align-items-center">
                 <img
                   src={cart}
@@ -37,8 +37,8 @@ function Header() {
                   alt="Cart"
                 />
               </div>
-            </Nav.Link>
-            <Nav.Link as={Link} to="/Sign-in" className="mx-3 text-dark">Sign in</Nav.Link> {/* Используем Link */}
+            </Link>
+            <Link to="/Sign-in" className="mx-3 text-dark" style={{ textDecoration: 'none' }}>Sign in</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
