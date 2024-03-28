@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from "./logo192.png"
 import cart from "./cart.png";
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import './Header.css'; // Импортируем файл стилей
+import './Header.css';
 
 function Header() {
   return (

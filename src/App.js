@@ -8,13 +8,13 @@ import { Women } from './Components/Women/Women.js';
 import { Kids } from './Components/Kids/Kids.js';
 import { New } from './Components/New/New.js'
 import { Signin } from './Components/Singin/Signin.js'
-
+import Footer from './Components/Footer/Footer.js'
 
 function App() {
   return (
     <Router>
       <div>
-        <Header />
+       <div/><Header /><div/>
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/men" element= {<Men/>} />
@@ -25,6 +25,7 @@ function App() {
 
         </Routes>
       </div>
+      <div/><Footer /><div/>
     </Router>
   );
 }
