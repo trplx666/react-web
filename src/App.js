@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <div>
-       <div/><Header /><div/>
+       <div style={{display: 'grid', gridTemplateColumns: 'ifr', gridTemplateRows: 'auto ifr auto', minHeight: '100svh'}}><Header /><div/>
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/men" element= {<Men/>} />
@@ -25,9 +25,14 @@ function App() {
 
         </Routes>
       </div>
-      <div/><Footer /><div/>
+      </div><Footer /><div/>
     </Router>
   );
 }
+
+
+
+
+
 
 export default App;
