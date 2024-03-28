@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import './Footer.css';
-import VKlogo from './VKlogo.png';
-import Telegram from './Telegram.png';
+import vk from './vk.svg';
+import telegram from './telegram.svg';
 
 
 const Footer = () => (
@@ -12,10 +12,10 @@ const Footer = () => (
           <p style={{ marginBottom: '10px' }}>© Cloting Shop</p>
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '-10px' }}> 
             <a href="https://example.com" target="_blank" rel="noopener noreferrer">
-              <img src={Telegram} alt="Telegram" style={{ width: '40px', marginRight: '5px' }} />
+              <img src={telegram} alt="telegram" style={{ width: '40px', marginRight: '15px' }} />
             </a>
             <a href="https://example.com" target="_blank" rel="noopener noreferrer">
-              <img src={VKlogo} alt="VK Logo" style={{ width: '40px' }} />
+              <img src={vk} alt="vk" style={{ width: '40px' }} />
             </a>
           </div>
         </Container>
