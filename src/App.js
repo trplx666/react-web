@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <div>
-       <div style={{display: 'grid', gridTemplateColumns: 'ifr', gridTemplateRows: 'auto ifr auto', minHeight: '100svh'}}><Header /><div/>
+       <div style={{display: 'grid', gridTemplateColumns: 'ifr', gridTemplateRows: 'auto ifr auto', minHeight: '70svh'}}><Header /><div/>
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/men" element= {<Men/>} />
