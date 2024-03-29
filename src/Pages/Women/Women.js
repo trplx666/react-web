@@ -1,7 +1,10 @@
 import React from 'react';
+import WomenCategories from './WomenCategories';
+import './Women.css';
 
 export const Women = () => (
-  <h1>
-    Women
-  </h1>
-)
+  <div className="women-container">
+    <h1>Women</h1>
+    <WomenCategories />
+  </div>
+);
