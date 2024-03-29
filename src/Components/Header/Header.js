@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from "./logo192.png"
+import logo from "./logo.webp"
 import cart from "./cart.png";
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import './Header.css';
