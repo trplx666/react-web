@@ -11,6 +11,7 @@ import { New } from './Pages/New/New.js'
 import { Login } from './Pages/Login/Login.js';
 import { Logout } from './Pages/Logout/Logout.js';
 import { Profile } from './Pages/Profile/Profile.js';
+import {Error} from './Pages/404/404.js';
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
           <Route path ="/login" element = {<Login/> } />
           <Route path = "/logout" element = {<Logout/>} />
           <Route path = "/profile" element = {<Profile />} />
+
+          <Route path = "*" element = {<Error />} />
 
         </Routes>
       </div>

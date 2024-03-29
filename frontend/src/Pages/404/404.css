@@ -1,0 +1,18 @@
+.errorContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .errorText404 {
+    font-size: 5rem;
+    color: red;
+  }
+  
+  .errorTextDescription {
+    margin-top: 20px;
+    color: gray;
+  }
+  
