@@ -2,12 +2,12 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Components/Header/Header';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Home }from './Components/Home/Home.js';
-import { Men } from './Components/Men/Men.js';
-import { Women } from './Components/Women/Women.js';
-import { Kids } from './Components/Kids/Kids.js';
-import { New } from './Components/New/New.js'
-import { Signin } from './Components/Singin/Signin.js'
+import { Home }from './Pages/Home/Home.js';
+import { Men } from './Pages/Men/Men.js';
+import { Women } from './Pages/Women/Women.js';
+import { Kids } from './Pages/Kids/Kids.js';
+import { New } from './Pages/New/New.js'
+import { Signin } from './Pages/Singin/Signin.js'
 import Footer from './Components/Footer/Footer.js'
 
 function App() {
