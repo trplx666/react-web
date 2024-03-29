@@ -40,13 +40,12 @@ function Header() {
                   />
                 </div>
               </Link>
-              <Link to="/Sign-in" className="mx-3 text-dark" style={{ textDecoration: 'none' }}>Sign in</Link>
+              <Link to="/login" className="mx-3 text-dark" style={{ textDecoration: 'none' }}>Login</Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <div className="content"> {/* Добавляем класс content */}
-        {/* Ваш контент здесь */}
+      <div className="content">
       </div>
     </div>
   );

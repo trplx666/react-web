@@ -1,7 +1,7 @@
 import React from 'react';
 
-export const Signin = () => (
+export const Logout = () => (
   <h1>
-    Sign-in
+    Logout
   </h1>
 )

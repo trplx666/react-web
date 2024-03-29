@@ -1,14 +1,16 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer.js'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home }from './Pages/Home/Home.js';
 import { Men } from './Pages/Men/Men.js';
-import {Women} from './Pages/Women/Women.js';
+import { Women } from './Pages/Women/Women.js';
 import { Kids } from './Pages/Kids/Kids.js';
 import { New } from './Pages/New/New.js'
-import { Signin } from './Pages/Singin/Signin.js'
-import Footer from './Components/Footer/Footer.js'
+import { Login } from './Pages/Login/Login.js';
+import { Logout } from './Pages/Logout/Logout.js';
+import { Profile } from './Profile/Profile.js';
 
 function App() {
   return (
@@ -20,8 +22,10 @@ function App() {
           <Route exact path="/men" element= {<Men/>} />
           <Route path="/women" element= {<Women/>} />
           <Route path="/kids" element= {<Kids/>} />
-          <Route path="/New" element= {<New/>} />
-          <Route path="/Sign-in" element= {<Signin/>} />
+          <Route path="/new" element= {<New/>} />
+          <Route path ="/login" element = {<Login/> } />
+          <Route path = "/logout" element = {<Logout/>} />
+          <Route path = "/profile" element = {<Profile />} />
 
         </Routes>
       </div>
