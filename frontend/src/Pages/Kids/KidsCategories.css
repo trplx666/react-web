@@ -1,0 +1,21 @@
+.kids-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .kids-image-container {
+    position: relative;
+    text-align: center;
+  }
+  
+  .kids-image-container img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .image-alt {
+    text-align: center;
+  }
+  
