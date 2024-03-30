@@ -10,7 +10,7 @@ import { Kids } from './Pages/Kids/Kids.js';
 import { New } from './Pages/New/New.js'
 import { Login } from './Pages/Login/Login.js';
 import { Logout } from './Pages/Logout/Logout.js';
-import { Profile } from './Pages/Profile/Profile.js';
+import Profile from './Pages/Profile/Profile.js';
 import {Error} from './Pages/404/404.js';
 import {Register} from './Pages/Register/Register.js'
 import { ToastContainer } from 'react-toastify';
