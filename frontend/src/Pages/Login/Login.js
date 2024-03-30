@@ -3,6 +3,7 @@ import { FormGroup, Form, Button, Row , Col } from 'react-bootstrap';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import styles from './Login.css'; 
+import { Link } from 'react-router-dom';
 
 const initialUser = { password: '', email: '' };
 
@@ -25,12 +26,17 @@ export const Login = () => {
                 console.log({res});
             }
         } catch (error) {
-            toast.error (error.message, {
-                hideProgressBar: true,
-            })
-            
+            if (error.response && error.response.status === 400) {
+                toast.error('Wrong email or password', {
+                    hideProgressBar: true,
+                });
+            } else {
+                toast.error(error.message, {
+                    hideProgressBar: true,
+                });
+            }
         }
-    };   
+    }; 
 
     return (
         <Row className={styles.loginContainer}> 
@@ -58,6 +64,11 @@ export const Login = () => {
                 <div className='buttonContainer'>
                 <Button variant="primary" onClick={handleLogin}>Login</Button>{' '}
                 </div>
+                <h6 className="createContainer">
+                <Link to='/register' style={{ textDecoration: 'none' }}>
+                    Don't have an account? 
+                </Link>
+                </h6>
             </div>
             </Col>
         </Row>
