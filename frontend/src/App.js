@@ -13,6 +13,7 @@ import { Logout } from './Pages/Logout/Logout.js';
 import { Profile } from './Pages/Profile/Profile.js';
 import {Error} from './Pages/404/404.js';
 import {Register} from './Pages/Register/Register.js'
+import { ToastContainer } from 'react-toastify';
 function App() {
   return (
     <Router>
@@ -28,10 +29,9 @@ function App() {
           <Route path = "/logout" element = {<Logout/>} />
           <Route path = "/profile" element = {<Profile />} />
           <Route path ='/register' element = {<Register />} />
-
           <Route path = "*" element = {<Error />} />
-
         </Routes>
+        <ToastContainer />
       </div>
       </div><Footer /><div/>
     </Router>

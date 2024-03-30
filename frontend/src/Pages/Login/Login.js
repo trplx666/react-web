@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { FormGroup, Form, FormControl, FormText, Button, Row , Col } from 'react-bootstrap';
+import { FormGroup, Form, Button, Row , Col } from 'react-bootstrap';
+import axios from 'axios';
+import { toast } from 'react-toastify';
 import styles from './Login.css'; 
 
 const initialUser = { password: '', email: '' };
@@ -7,15 +9,28 @@ const initialUser = { password: '', email: '' };
 export const Login = () => {
     const [user, setUser] = useState(initialUser);
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setUser(prevUser => ({
-            ...prevUser,
-            [name]: value
-        }));
+    const handleChange = ({target}) => {
+        const {name, value} = target
+        setUser((currentUser) => ({
+        ...currentUser,
+        [name] : value,
+        }))
     };
 
-    const  handleLogin = () =>{};   
+    const  handleLogin = async() =>{
+        const url = 'http://localhost:1337/api/auth/local'
+        try {
+            if (user.email && user.password) {
+                const res = await axios.post(url, user);
+                console.log({res});
+            }
+        } catch (error) {
+            toast.error (error.message, {
+                hideProgressBar: true,
+            })
+            
+        }
+    };   
 
     return (
         <Row className={styles.loginContainer}> 
