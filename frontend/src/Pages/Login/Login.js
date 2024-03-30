@@ -4,6 +4,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import styles from './Login.css';
 import { Link, useNavigate } from 'react-router-dom';
+import { storeUser } from '../../helpers';
 
 
 
@@ -27,11 +28,12 @@ export const Login = () => {
             if (user.identifier && user.password) {
                 const {data} = await axios.post(url, user);
 if (data.jwt) {
+    storeUser(data)
     toast.success('Logged in successfully! ', {
         hideProgressBar:true,
     })
     setUser(initialUser)
-    navigate('/')
+    navigate('/profile')
 }
 
             }
