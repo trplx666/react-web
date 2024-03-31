@@ -3,7 +3,7 @@ import { FormGroup, Form, Button, Row, Col } from 'react-bootstrap';
 import './Register.css';
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router-dom';
 const initialUser = {email:"", password: "", username: ""};
 export const Register = () => {
     const [user, setUser] = useState({initialUser});
@@ -64,6 +64,11 @@ export const Register = () => {
                         />
             </FormGroup>
             <Button variant="primary" onClick={SignUp} className="buttonContainer">Sign up</Button>{' '} 
+            <h6 className="loginContainer">
+                        <Link to="/login" style={{ textDecoration: 'none' }}>
+                        Already have an account?
+                        </Link>
+            </h6>
         </Col>
     </Row>
     );
