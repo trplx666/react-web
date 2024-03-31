@@ -13,6 +13,7 @@ import Profile from './Pages/Profile/Profile.js';
 import {Error} from './Pages/404/404.js';
 import {Register} from './Pages/Register/Register.js'
 import { ToastContainer } from 'react-toastify';
+import { Protector } from './helpers.js';
 function App() {
   return (
     <Router>
@@ -25,7 +26,9 @@ function App() {
           <Route path="/kids" element= {<Kids/>} />
           <Route path="/new" element= {<New/>} />
           <Route path ="/login" element = {<Login/> } />
-          <Route path = "/profile" element = {<Profile />} />
+
+          <Route path = "/profile" element = {<Protector Component={Profile} />} />
+
           <Route path ='/register' element = {<Register />} />
           <Route path = "*" element = {<Error />} />
         </Routes>
