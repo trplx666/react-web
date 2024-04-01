@@ -4,10 +4,10 @@
     align-items: center;
     justify-content: center;
     height: auto; 
+    margin-top: 10px; /* уменьшаем отступ сверху */
 }
 
-.kids-block {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px; 
+.kids-container h1 {
+    font-size: 2em; /* задаем размер шрифта */
+    margin-bottom: 20px; /* увеличиваем отступ снизу */
 }
