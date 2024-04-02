@@ -1,21 +1,31 @@
 .kids-block {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .kids-image-container {
-    position: relative;
-    text-align: center;
-  }
-  
-  .kids-image-container img {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .image-alt {
-    text-align: center;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.kids-image-container {
+  position: relative;
+  text-align: center;
+}
+
+.kids-block img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.image-alt {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px;
+  border-radius: 0 0 5px 5px;
+}
