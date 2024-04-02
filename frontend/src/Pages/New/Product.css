@@ -1,0 +1,25 @@
+.product-card {
+    color: #020024;
+    border: 1px solid #ccc;
+    max-width: 200px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(138, 135, 135, 0.7);
+    padding: 10px;
+  }

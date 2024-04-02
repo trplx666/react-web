@@ -7,7 +7,7 @@ import { Home }from './Pages/Home/Home.js';
 import { Men } from './Pages/Men/Men.js';
 import { Women } from './Pages/Women/Women.js';
 import { Kids } from './Pages/Kids/Kids.js';
-import { New } from './Pages/New/New.js'
+import New  from './Pages/New/New.js'
 import { Login } from './Pages/Login/Login.js';
 import Profile from './Pages/Profile/Profile.js';
 import {Error} from './Pages/404/404.js';
