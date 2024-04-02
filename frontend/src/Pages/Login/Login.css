@@ -1,11 +1,17 @@
+body {
+  overflow-x: hidden;
+}
+
+
+
 .inputContainer {
-    max-width: 300px;
-  }
+  max-width: 300px;
+}
 
-  .buttonContainer {
-    margin-top: 10px;
-  }
+.buttonContainer {
+  margin-top: 10px;
+}
 
-  .createContainer{
-    margin-top:10px;
-  }
+.createContainer {
+  margin-top: 10px;
+} 
