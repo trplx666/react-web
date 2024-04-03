@@ -4,8 +4,13 @@ import logo from "./logo.webp"
 import cart from "./cart.png";
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import './Header.css';
+import { userData } from '../../helpers';
 
 function Header() {
+  const user = userData()
+
+  const isUserLogged = user.username !== undefined && user.jwt !== undefined
+
   return (
     <div>
       <Navbar expand="lg" className="bg-body-tertiary fixed-top">
@@ -40,7 +45,12 @@ function Header() {
                   />
                 </div>
               </Link>
-              <Link to="/login" className="mx-3 text-dark" style={{ textDecoration: 'none' }}>Login</Link>
+              { isUserLogged ? (
+                  <Link to="/profile">{user.username}</Link>
+                ) : (
+                  <Link to="/login" className="mx-3 text-dark" style={{ textDecoration: 'none' }}>Login</Link>
+                )
+              }
             </Nav>
           </Navbar.Collapse>
         </Container>
