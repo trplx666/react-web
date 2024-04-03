@@ -46,7 +46,7 @@ function Header() {
                 </div>
               </Link>
               { isUserLogged ? (
-                  <Link to="/profile">{user.username}</Link>
+                  <Link to="/profile" className="mx-3 text-dark" style={{ textDecoration: 'none' }}>{user.username}</Link>
                 ) : (
                   <Link to="/login" className="mx-3 text-dark" style={{ textDecoration: 'none' }}>Login</Link>
                 )
