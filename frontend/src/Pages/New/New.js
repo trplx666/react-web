@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { useProducts } from '../useProducts';
+import { useProducts } from '../../Components/Product/useProducts';
 import { Row, Col } from 'react-bootstrap';
-import Product from './Product';
+import Product from '../../Components/Product/Product';
 import './New.css';
 import { Link } from 'react-router-dom';
 
