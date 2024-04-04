@@ -3,6 +3,7 @@ import { useProducts } from '../useProducts';
 import { Row, Col } from 'react-bootstrap';
 import Product from './Product';
 import './New.css';
+import { Link } from 'react-router-dom';
 
 const New = () => {
   const { categories, products } = useProducts();
@@ -24,7 +25,9 @@ const New = () => {
               <Row>
                 {hasProducts.map(product => (
                   <Col key={product.id}>
+                    <Link to={`/product-details/${product.id}`}>
                     <Product product={product} />
+                    </Link>
                   </Col>
                 ))}
               </Row>
