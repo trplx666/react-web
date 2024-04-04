@@ -13,7 +13,7 @@ const Product = ({ product }) => {
         src={`http://localhost:1337${image.url}`}
         alt={image.name}
       />
-      <CardBody>
+    <CardBody className="custom-card-body">
         <CardTitle>{product.attributes.name}</CardTitle>
         <CardSubtitle>
           <strong>Price: £{product.attributes.price}</strong>
