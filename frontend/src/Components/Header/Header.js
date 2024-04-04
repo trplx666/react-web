@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from "./logo.webp"
 import cart from "./cart.png";
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown} from 'react-bootstrap';
 import './Header.css';
 import { userData } from '../../helpers';
 
@@ -10,6 +10,13 @@ function Header() {
   const user = userData()
 
   const isUserLogged = user.username !== undefined && user.jwt !== undefined
+  
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    navigate('/login');
+  };
 
   return (
     <div>
@@ -46,7 +53,12 @@ function Header() {
                 </div>
               </Link>
               { isUserLogged ? (
-                  <Link to="/profile" className="mx-3 text-dark" style={{ textDecoration: 'none' }}>{user.username}</Link>
+                  <NavDropdown
+                  title={user.username}
+                >
+                  <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleLogout}>Log out</NavDropdown.Item>
+                </NavDropdown>
                 ) : (
                   <Link to="/login" className="mx-3 text-dark" style={{ textDecoration: 'none' }}>Login</Link>
                 )

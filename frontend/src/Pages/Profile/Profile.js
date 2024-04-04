@@ -7,7 +7,6 @@ const Profile = () => {
   const { username } = userData();
   const navigate = useNavigate();
 
-  // Function to handle logout
   const handleLogout = () => {
     localStorage.setItem('user', "");
     navigate('/login');
