@@ -55,10 +55,9 @@ function Header() {
               { isUserLogged ? (
                   <NavDropdown
                   className="mx-3 text-dark"
-                  style={{ textDecoration: 'none' }}
-                  title={user.username}
+                  title={<span style={{ color: 'black' }}>{user.username}</span>}
                 >
-                  <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
+                  <NavDropdown.Item href="/profile" >Profile</NavDropdown.Item>
                   <NavDropdown.Item onClick={handleLogout}>Log out</NavDropdown.Item>
                 </NavDropdown>
                 ) : (
