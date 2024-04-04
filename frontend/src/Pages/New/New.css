@@ -1,18 +1,36 @@
 .New {
-    margin-top: 30px;
-  }
-  
-  .New > h2 {
-    margin-bottom: 32px;
-  }
-  
-  .New .category {
-    margin-bottom: 20px;
-  }
-  
-  .New .category-title {
-    margin: 10px 0;
-    text-align: center;
-    padding: 40px;
-    border-radius: 9px;
-  }
+  margin-top: 30px;
+}
+
+.New > h2 {
+  margin-bottom: 32px;
+}
+
+.New .category {
+  margin-bottom: 20px;
+}
+
+.New .category-title {
+  margin: 10px 0;
+  text-align: center;
+  padding: 40px;
+  border-radius: 9px;
+}
+
+.category-title {
+  background-color: #f0f0f0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.product-container {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.5s ease-out, opacity 0.75s ease-out;
+}
+
+.product-container.show {
+  max-height: 1000px;
+  opacity: 1;
+}

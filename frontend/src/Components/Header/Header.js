@@ -54,6 +54,8 @@ function Header() {
               </Link>
               { isUserLogged ? (
                   <NavDropdown
+                  className="mx-3 text-dark"
+                  style={{ textDecoration: 'none' }}
                   title={user.username}
                 >
                   <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
