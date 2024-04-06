@@ -1,21 +1,42 @@
-import React from "react";
-import { userData } from "../../helpers";
-import { useNavigate } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { IoPersonCircleOutline } from "react-icons/io5";
+import './Profile.css'; // Импорт CSS файла
 
-const Profile = () => {
-  const { username } = userData();
-  const navigate = useNavigate();
+const Profile = ({ token }) => {
+  const [user, setUser] = useState({});
+  const [isUserUpdated, setisUserUpdated] = useState(false);
 
-  const handleLogout = () => {
-    localStorage.setItem('user', "");
-    navigate('/login');
-  };
+  useEffect(() => {
+    const getProfileData = async () => {
+      try {
+        const { data } = await axios.get(`http://localhost:1337/api/users/me`, {
+          headers: {
+            Authorization: `bearer ${token}`,
+          },
+        });
+        setUser(data);
+        setisUserUpdated(false);
+      } catch (error) {
+        console.log({ error });
+      }
+    };
+    getProfileData();
+  }, [token, isUserUpdated]);
 
   return (
-    <div>
-      <h2>Welcome {username}</h2>
-      <Button variant="danger" onClick={handleLogout}>Logout</Button>{' '}
+    <div className="profile">
+      <div className="avatar">
+        <div className="avatar-wrapper">
+          <IoPersonCircleOutline size={125} />
+        </div>
+      </div>
+      <div className="body">
+        {/* Отображаем информацию о пользователе */}
+        <p>Name: {user.username}</p>
+        <p>Email: {user.email}</p>
+        <p>Account created at: {new Date(user.createdAt).toLocaleDateString()}</p>
+      </div>
     </div>
   );
 };
