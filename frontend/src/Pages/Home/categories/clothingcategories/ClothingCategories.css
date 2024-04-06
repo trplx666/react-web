@@ -1,28 +1,42 @@
 .clothing-container {
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clothing-image {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.clothing-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px; 
+}
+
+.image-alt {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  margin: 0;
+  padding: 5px;
+  background-color: rgba(201, 40, 40, 0.8);
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .clothing-container {
+    flex-direction: row;
     justify-content: center;
-  }
-
-
-  .clothing-image {
-    width: 300px; /* Увеличиваем ширину изображений */
-    height: 400px; /* Увеличиваем высоту изображений */
-    object-fit: cover;
-  }
-
-
-
-  .clothing-image-container {
-    position: relative;
-    margin: 0 10px; /* Внешний отступ между изображениями */
+    align-items: flex-start;
+    flex-wrap: wrap;
   }
   
-  .image-alt {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    margin: 0;
-    padding: 5px;
-    background-color: rgba(201, 40, 40, 0.8);
-    border-radius: 5px;
+  .clothing-image-container {
+    margin-right: 20px; 
   }
+}

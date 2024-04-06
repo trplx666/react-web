@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer.js'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Home } from './Pages/Home/Home.js';
+import Home  from './Pages/Home/Home.js';
 import { Men } from './Pages/Men/Men.js';
 import { Women } from './Pages/Women/Women.js';
 import { Kids } from './Pages/Kids/Kids.js';
