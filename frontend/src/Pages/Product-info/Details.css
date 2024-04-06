@@ -1,6 +1,10 @@
+
+
+
 .product-details {
   margin-top: 20px;
   background-color: transparent;
+  overflow-x: hidden;
 }
 
 .product-details .card-subtitle {
