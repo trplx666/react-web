@@ -20,7 +20,7 @@ function App() {
   const {jwt , username} = userData()
   return (
     <Router>
-      <div>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr', gridTemplateRows: 'auto 1fr auto', minHeight: '100svh' }}>
         <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />
