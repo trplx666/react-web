@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { IoPersonCircleOutline } from "react-icons/io5";
-import './Profile.css'; // Импорт CSS файла
+import './Profile.css';
 
 const Profile = ({ token }) => {
   const [user, setUser] = useState({});
@@ -32,7 +32,6 @@ const Profile = ({ token }) => {
         </div>
       </div>
       <div className="body">
-        {/* Отображаем информацию о пользователе */}
         <p>Name: {user.username}</p>
         <p>Email: {user.email}</p>
         <p>Account created at: {new Date(user.createdAt).toLocaleDateString()}</p>
