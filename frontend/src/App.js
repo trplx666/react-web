@@ -15,6 +15,7 @@ import { Error } from './Pages/404/404.js';
 import { Register } from './Pages/Register/Register.js'
 import { ToastContainer } from 'react-toastify';
 import { Protector, userData } from './helpers.js';
+import faq from './Pages/FAQ/faq.js'
 
 function App() {
   const {jwt , username} = userData()
@@ -31,7 +32,7 @@ function App() {
           <Route path="/product-details/:id" element={<Details />} />
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Protector Component={Profile} token={jwt} />} />
-
+          <Route path="/faq" element={<Protector Component={faq} token={jwt} />} />
           <Route path="/register" element={<Register />} />
           <Route path="*" element={<Error />} />
         </Routes>
