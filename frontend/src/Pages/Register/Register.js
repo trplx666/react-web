@@ -29,7 +29,12 @@ export const Register = () => {
     };
 
     const handleUserChange = ({ target }) => {
-        const { name, value } = target;
+        let { name, value } = target;
+        
+        if (name === 'username') {
+            value = value.charAt(0).toUpperCase() + value.slice(1);
+        }
+
         setUser((currentUser) => ({
             ...currentUser,
             [name]: value,
