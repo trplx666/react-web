@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { FormGroup, Form, Button, Col } from 'react-bootstrap';
-import './Register.css';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { Link, useNavigate } from 'react-router-dom';
@@ -45,31 +44,34 @@ export const Register = () => {
         <div className="d-flex justify-content-center align-items-center register-container">
             <Col xs="12" md="6" lg="4">
                 <h2>Sign Up:</h2>
-                <FormGroup>
+                <FormGroup className="mb-3">
                     <Form.Control
                         type="text"
                         name="username"
                         value={user.username}
                         onChange={handleUserChange}
                         placeholder="Enter your full name"
+                        required
                     />
                 </FormGroup>
-                <FormGroup>
+                <FormGroup className="mb-3">
                     <Form.Control
                         type="email"
                         name="email"
                         value={user.email}
                         onChange={handleUserChange}
                         placeholder="Enter your email"
+                        required
                     />
                 </FormGroup>
-                <FormGroup>
+                <FormGroup className="mb-3">
                     <Form.Control
                         type="password"
                         name="password"
                         value={user.password}
                         onChange={handleUserChange}
                         placeholder="Enter password"
+                        required
                     />
                 </FormGroup>
                 <Button variant="primary" onClick={SignUp} className="buttonContainer">Sign up</Button>{' '}

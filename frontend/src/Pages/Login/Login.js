@@ -50,22 +50,24 @@ export const Login = () => {
         <div className="d-flex justify-content-center align-items-center login-container">
             <Col xs="12" md="6" lg="4">
                 <h2>Login:</h2>
-                <FormGroup className="inputContainer">
+                <FormGroup className="inputContainer mb-3">
                     <Form.Control
                         type="email"
                         name="identifier"
                         value={user.identifier}
                         onChange={handleChange}
                         placeholder="Enter your email"
+                        required
                     />
                 </FormGroup>
-                <FormGroup className="inputContainer">
+                <FormGroup className="inputContainer mb-3">
                     <Form.Control
                         type="password"
                         name="password"
                         value={user.password}
                         onChange={handleChange}
                         placeholder="Enter your password"
+                        required
                     />
                 </FormGroup>
                 <div className="buttonContainer">
