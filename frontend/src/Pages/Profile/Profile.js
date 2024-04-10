@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { IoPersonCircleOutline } from "react-icons/io5";
 import './Profile.css';
+import { userData } from "../../helpers";
 
 const Profile = ({ token }) => {
   const [user, setUser] = useState({});
@@ -12,7 +13,7 @@ const Profile = ({ token }) => {
       try {
         const { data } = await axios.get(`http://localhost:1337/api/users/me`, {
           headers: {
-            Authorization: `bearer ${token}`,
+            Authorization: `bearer ${userData().jwt}`,
           },
         });
         setUser(data);
