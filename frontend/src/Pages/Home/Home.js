@@ -3,7 +3,7 @@ import Slider from './slider/Slider';
 import AboutBlock from './categories/aboutblock/AboutBlock';
 import ClothingCategories from './categories/clothingcategories/ClothingCategories';
 import CustomAccordion from './categories/accordion/Accordion';
-
+import Contact from './contact/Contact';
 
 const Home = () => (
   <div style={{ padding: '0 20px' }}>
@@ -15,7 +15,10 @@ const Home = () => (
       <p style={{ fontSize: '24px' }}>Categories</p>
     </div>
     <ClothingCategories />
-    <CustomAccordion />
+    <div className='text-center' style={{ marginTop: '32px' }}>
+      <p style={{ fontSize: '24px' }}>Contact us</p>
+    </div>
+    <Contact />
   </div>
 );
 
