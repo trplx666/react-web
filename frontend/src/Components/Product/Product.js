@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardImg, CardBody, CardTitle, CardSubtitle } from "reactstrap";
-import "./Product.css"; // Импортируем стили для продуктов
+import "./Product.css";
 
 const Product = ({ product }) => {
   const image = product.attributes.images.data[0].attributes;

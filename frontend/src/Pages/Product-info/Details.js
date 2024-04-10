@@ -16,7 +16,7 @@ const ProductInfo = () => {
     <Card className="product-details"> {/* Добавляем класс product-details */}
       <Row>
         <Col sm="12" md="4">
-          <div className="sizes"> {/* Добавляем класс sizes */}
+          <div >
             <CardImg
               left="true"
               width="100%"

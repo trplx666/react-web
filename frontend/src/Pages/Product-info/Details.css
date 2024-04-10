@@ -14,7 +14,6 @@
 .product-details .sizes {
   display: flex;
   flex-direction: row;
-  margin-bottom: 10px;
 }
 
 .product-details .sizes span {
