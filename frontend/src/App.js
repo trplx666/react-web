@@ -19,7 +19,7 @@ import faq from './Pages/FAQ/faq.js'
 import MenClothes from './Pages/MenClothes/MenClothes.js';
 
 function App() {
-  const {jwt , username} = userData()
+  const {jwt } = userData()
   return (
     <Router>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr', gridTemplateRows: 'auto 1fr auto', minHeight: '100svh' }}>
