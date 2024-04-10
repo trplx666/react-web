@@ -42,28 +42,33 @@ function Header() {
               <Link to="/kids" className="mx-3 text-dark" style={{ textDecoration: 'none' }}>Kids</Link>
             </Nav>
             <Nav className="ms-auto">
-              <Link to="#cart">
-                <div className="d-flex align-items-center">
-                  <img
-                    src={cart}
-                    width="30"
-                    height="30"
-                    className="d-inline-block align-top"
-                    style={{ marginRight: '10px' }}
-                    alt="Cart"
-                  />
-                </div>
-              </Link>
               { isUserLogged ? (
+                  <>
+                  <Link to="#cart">
+                    <div className="d-flex align-items-center">
+                      <img
+                        src={cart}
+                        width="30"
+                        height="30"
+                        className="d-inline-block align-top"
+                        style={{ marginRight: '10px' }}
+                        alt="Cart"
+                      />
+                    </div>
+                  </Link>
                   <NavDropdown
-                  className="mx-3 text-dark"
-                  title={<span style={{ color: 'black' }}>{user.username}</span>}
-                >
-                  <NavDropdown.Item href="/profile" >Profile</NavDropdown.Item>
-                  <NavDropdown.Item onClick={handleLogout}>Log out</NavDropdown.Item>
-                </NavDropdown>
+                    className="mx-3 text-dark"
+                    title={<span style={{ color: 'black' }}>{user.username}</span>}
+                  >
+                    <NavDropdown.Item href="/profile" >Profile</NavDropdown.Item>
+                    <NavDropdown.Item onClick={handleLogout}>Log out</NavDropdown.Item>
+                  </NavDropdown>
+                  </>
                 ) : (
+                  <>
+                  <Link to="/register" className="mx-3 text-dark" style={{ textDecoration: 'none' }}>Register</Link>
                   <Link to="/login" className="mx-3 text-dark" style={{ textDecoration: 'none' }}>Login</Link>
+                  </>
                 )
               }
             </Nav>
