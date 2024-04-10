@@ -13,7 +13,7 @@ const ProductInfo = () => {
   const { attributes } = product;
 
   return (
-    <Card className="product-details"> {/* Добавляем класс product-details */}
+    <Card className="product-details">
       <Row>
         <Col sm="12" md="4">
           <div >
@@ -32,7 +32,7 @@ const ProductInfo = () => {
             <CardSubtitle>
               <strong>Price: £{attributes.price}</strong>
             </CardSubtitle>
-            <div className="sizes"> {/* Добавляем класс sizes */}
+            <div className="sizes">
               {attributes.sizes.map((size) => (
                 <span
                   key={size.name}
@@ -43,7 +43,7 @@ const ProductInfo = () => {
                 </span>
               ))}
             </div>
-            <div className="colours"> {/* Добавляем класс colours */}
+            <div className="colours">
               {attributes.colours.map((colour) => (
                 <span
                   key={colour.name}

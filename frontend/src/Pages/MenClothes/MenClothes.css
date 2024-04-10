@@ -1,46 +1,41 @@
-/* MenClothes.css */
 
-/* Общие стили для контейнера */
 .MenClothes {
   padding: 20px;
 }
 
-/* Стили для заголовка */
 .MenClothes h2 {
   text-align: center;
   margin-bottom: 20px;
 }
 
-/* Стили для строки с продуктами */
 .product-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* Равномерное распределение между элементами */
+  justify-content: space-between; 
 }
 
-/* Стили для колонок */
+
 .product-col {
-  flex: 0 0 calc(25% - 20px); /* Задаем каждой колонке ширину 25% с отступами по 10px */
+  flex: 0 0 calc(25% - 20px); 
   padding: 10px;
 }
 
-/* Стили для ссылок на детали продукта */
 .product-link {
   text-decoration: none;
   color: inherit;
-  display: block; /* Сделаем ссылки блочными элементами */
+  display: block; 
 }
 
-/* Стили для товара */
+
 .product {
-  border: 1px solid #ccc; /* Устанавливаем рамку товара */
-  border-radius: 5px; /* Добавляем закругление углов */
-  overflow: hidden; /* Скрытие излишков содержимого */
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  overflow: hidden; 
 }
 
-/* Стили для названия продукта */
+
 .product-name {
-  margin-top: 10px; /* Отступ сверху */
+  margin-top: 10px; 
   font-weight: bold;
-  text-align: center; /* Выравнивание текста по центру */
+  text-align: center; 
 }

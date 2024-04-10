@@ -2,7 +2,6 @@ import React from 'react';
 import Slider from './slider/Slider';
 import AboutBlock from './categories/aboutblock/AboutBlock';
 import ClothingCategories from './categories/clothingcategories/ClothingCategories';
-import CustomAccordion from './categories/accordion/Accordion';
 import Contact from './contact/Contact';
 
 const Home = () => (
