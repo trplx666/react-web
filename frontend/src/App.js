@@ -17,6 +17,11 @@ import { ToastContainer } from 'react-toastify';
 import { Protector, userData } from './helpers.js';
 import faq from './Pages/FAQ/faq.js'
 import MenClothes from './Pages/MenClothes/MenClothes.js';
+import WomenClothes from './Pages/WomenClothes/WomenClothes.js'
+import MenAccessories from './Pages/MenAccessories/MenAccessories.js'
+import MenShoes from './Pages/MenShoes/MenShoes.js'
+import WomenShoes from './Pages/WomenShoes/WomenShoes.js'
+import WomenAccessories from './Pages/WomenAccessories/WomenAccessories.js'
 
 function App() {
   const {jwt } = userData()
@@ -37,6 +42,11 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="*" element={<Error />} />
           <Route path="/men/clothes" element = {<MenClothes/>}/>
+          <Route path="/women/clothes" element = {<WomenClothes/>}/>
+          <Route path="/men/accessories" element = {<MenAccessories/>}/>
+          <Route path="/women/shoes" element = {<WomenShoes/>}/>
+          <Route path="/women/accessories" element = {<WomenAccessories/>}/>
+          <Route path="/men/shoes" element = {<MenShoes/>}/>
         </Routes>
         <ToastContainer />
         <Footer />
