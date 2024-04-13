@@ -3,6 +3,7 @@ import Slider from './slider/Slider';
 import AboutBlock from './categories/aboutblock/AboutBlock';
 import ClothingCategories from './categories/clothingcategories/ClothingCategories';
 import Contact from './contact/Contact';
+import ChatIcon from '../../Components/Chat/chat.js';
 
 const Home = () => (
   <div style={{ padding: '0 20px' }}>
@@ -18,6 +19,7 @@ const Home = () => (
       <p style={{ fontSize: '24px' }}>Contact us</p>
     </div>
     <Contact />
+    <ChatIcon />
   </div>
 );
 
