@@ -22,6 +22,9 @@ import MenAccessories from './Pages/MenAccessories/MenAccessories.js'
 import MenShoes from './Pages/MenShoes/MenShoes.js'
 import WomenShoes from './Pages/WomenShoes/WomenShoes.js'
 import WomenAccessories from './Pages/WomenAccessories/WomenAccessories.js'
+import KidsClothes from './Pages/KidsClothes/KidsClothes.js'
+import KidsAccessories from './Pages/KidsAccessories/KidsAccessories.js'
+import KidsShoes from './Pages/KidsShoes/KidsShoes.js'
 
 function App() {
   const {jwt } = userData()
@@ -47,6 +50,9 @@ function App() {
           <Route path="/women/shoes" element = {<WomenShoes/>}/>
           <Route path="/women/accessories" element = {<WomenAccessories/>}/>
           <Route path="/men/shoes" element = {<MenShoes/>}/>
+          <Route path="/kids/clothes" element = {<KidsClothes/>}/>
+          <Route path="/kids/accessories" element = {<KidsAccessories/>}/>
+          <Route path="/kids/shoes" element = {<KidsShoes/>}/>
         </Routes>
         <ToastContainer />
         <Footer />
