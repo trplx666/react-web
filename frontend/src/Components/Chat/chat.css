@@ -1,0 +1,21 @@
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff; /* Цвет фона круга */
+    color: #ffffff; /* Цвет иконки */
+    border-radius: 50%; /* Делаем круглый */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+    z-index: 999; /* Установка z-index для отображения поверх других элементов */
+  }
+  
+  .chat-icon:hover {
+    background-color: #0056b3; /* Цвет фона при наведении */
+  }
+  

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useProductInfo } from './UseProductInfo';
+import { useProductInfo } from './useProductInfo';
 import { Card, Row, Col, CardImg, CardBody, CardTitle, CardText, CardSubtitle, Button } from 'react-bootstrap';
 import './Details.css'; // Импорт файла стилей
 

@@ -4,6 +4,7 @@ import { Row, Col } from 'react-bootstrap';
 import Product from '../../Components/Product/Product';
 import './New.css';
 import { Link } from 'react-router-dom';
+import ChatIcon from '../../Components/Chat/chat';
 
 const New = () => {
   const { categories, products } = useProducts();
@@ -35,6 +36,7 @@ const New = () => {
           </div>
         );
       })}
+    <ChatIcon />
     </div>
   );
 };
