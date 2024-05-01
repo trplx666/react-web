@@ -55,7 +55,7 @@ const Profile = ({ token }) => {
         <p>Email: {user.email}</p>
         <p>Account created at: {new Date(user.createdAt).toLocaleDateString()}</p>
         <Button variant="primary">Change password</Button>{' '}
-        <Button variant="primary">Delivery information</Button>{' '}
+        <Button variant="primary" href="profile/orders" >Orders</Button>{' '}
         <p style={{ marginTop: '10px' }}>
           <Button variant="danger" onClick={handleShowModal}>Log out</Button>{' '}
         </p>

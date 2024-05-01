@@ -26,6 +26,7 @@ import KidsClothes from './Pages/KidsClothes/KidsClothes.js'
 import KidsAccessories from './Pages/KidsAccessories/KidsAccessories.js'
 import KidsShoes from './Pages/KidsShoes/KidsShoes.js'
 import Faq from './Pages/FAQ/faq.js';
+import Order from './Pages/Order/order.js';
 
 function App() {
   const {jwt } = userData()
@@ -54,6 +55,7 @@ function App() {
           <Route path="/kids/clothes" element = {<KidsClothes/>}/>
           <Route path="/kids/accessories" element = {<KidsAccessories/>}/>
           <Route path="/kids/shoes" element = {<KidsShoes/>}/>
+          <Route path="/profile/orders" element ={< Order/>}/>
         </Routes>
         <ToastContainer />
         <Footer />
