@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from "./logo.webp"
 import cart from "./cart.png";
-import { Container, Nav, Navbar, NavDropdown} from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown, Button, Modal } from 'react-bootstrap';
 import './Header.css';
 import { userData } from '../../helpers';
 
 function Header() {
   const user = userData()
-
-  const isUserLogged = user.username !== undefined && user.jwt !== undefined
-  
+  const isUserLogged = user.username !== undefined && user.jwt !== undefined;
   const navigate = useNavigate();
+  const [showModal, setShowModal] = useState(false);
+
+  const handleCloseModal = () => setShowModal(false);
+  const handleShowModal = () => setShowModal(true);
 
   const handleLogout = () => {
     localStorage.removeItem('user');
@@ -60,8 +62,8 @@ function Header() {
                     className="mx-3 text-dark"
                     title={<span style={{ color: 'black' }}>{user.username}</span>}
                   >
-                    <NavDropdown.Item href="/profile" >Profile</NavDropdown.Item>
-                    <NavDropdown.Item onClick={handleLogout}>Log out</NavDropdown.Item>
+                    <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
+                    <NavDropdown.Item onClick={handleShowModal}>Log out</NavDropdown.Item>
                   </NavDropdown>
                   </>
                 ) : (
@@ -77,6 +79,18 @@ function Header() {
       </Navbar>
       <div className="content">
       </div>
+
+      {/* Модальное окно для подтверждения выхода */}
+      <Modal show={showModal} onHide={handleCloseModal} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Confirmation</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Are you sure you want to log out?</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseModal}>No</Button>
+          <Button variant="danger" onClick={handleLogout}>Yes</Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 }
