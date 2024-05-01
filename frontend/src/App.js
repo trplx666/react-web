@@ -15,7 +15,7 @@ import { Error } from './Pages/404/404.js';
 import { Register } from './Pages/Register/Register.js'
 import { ToastContainer } from 'react-toastify';
 import { Protector, userData } from './helpers.js';
-import faq from './Pages/FAQ/faq.js'
+import FAQ from './Pages/FAQ/faq.js'
 import MenClothes from './Pages/MenClothes/MenClothes.js';
 import WomenClothes from './Pages/WomenClothes/WomenClothes.js'
 import MenAccessories from './Pages/MenAccessories/MenAccessories.js'
@@ -25,6 +25,7 @@ import WomenAccessories from './Pages/WomenAccessories/WomenAccessories.js'
 import KidsClothes from './Pages/KidsClothes/KidsClothes.js'
 import KidsAccessories from './Pages/KidsAccessories/KidsAccessories.js'
 import KidsShoes from './Pages/KidsShoes/KidsShoes.js'
+import Faq from './Pages/FAQ/faq.js';
 
 function App() {
   const {jwt } = userData()
@@ -41,7 +42,7 @@ function App() {
           <Route path="/product-details/:id" element={<Details />} />
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Protector Component={Profile} token={jwt} />} />
-          <Route path="/faq" element={<Protector Component={faq} token={jwt} />} />
+          <Route path="/faq" element={<Faq />} />
           <Route path="/register" element={<Register />} />
           <Route path="*" element={<Error />} />
           <Route path="/men/clothes" element = {<MenClothes/>}/>
