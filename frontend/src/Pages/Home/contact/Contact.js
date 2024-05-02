@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Col } from 'react-bootstrap';
+import axios from 'axios'
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -16,11 +17,18 @@ function Contact() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Logic for form submission
     console.log(formData);
     // Reset form state after submission
+
+    const body = {
+      data: formData
+    }
+
+    await axios.post("http://localhost:1337/api/questions", body)
+
     setFormData({
       name: '',
       email: '',
